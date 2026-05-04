@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fcar Automotiva</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #0a0a0a;
+      color: white;
+    }
+
+    header {
+      background: black;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid red;
+    }
+
+    header h1 {
+      color: red;
+    }
+
+    a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    a:hover {
+      color: red;
+      transition: 0.2s;
+    }
+
+    .hero {
+      height: 80vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1515923162035-7d1f4c5b9d6c');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      color: white;
+    }
+
+    .hero p {
+      margin-top: 10px;
+      color: #ccc;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: red;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px;
+    }
+
+    .hero button:hover {
+      background: #cc0000;
+    }
+
+    .section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section h3 {
+      color: red;
+      margin-bottom: 20px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card {
+      background: #111;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px solid #222;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: red;
+    }
+
+    footer {
+      background: black;
+      padding: 20px;
+      text-align: center;
+      border-top: 2px solid red;
+    }
+
+    footer p {
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="">
+    <img src="frontend\static\img\logoFcar.jpg" alt="Logo Fcar" style="height: 50px;">
+  </a>
+  <nav>
+    <a href="#">Início</a>
+    <a href="#">Serviços</a>
+    <a href="#">Contato</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Sua oficina de confiança</h2>
+    <p>Qualidade, rapidez e confiança para seu veículo</p>
+    <button onclick="saibaMais()">Saiba Mais</button>
+  </div>
+</section>
+
+<section class="section">
+  <h3>Sobre Nós</h3>
+  <p>Somos uma oficina especializada em manutenção automotiva e venda de peças, oferecendo serviços de alta qualidade com profissionais experientes.</p>
+</section>
+
+<section class="section">
+  <h3>Nossos Serviços</h3>
+  <div class="cards">
+    <div class="card">
+      <h4>Manutenção</h4>
+      <p>Revisões completas e preventivas para seu carro.</p>
+    </div>
+    <div class="card">
+      <h4>Auto Peças</h4>
+      <p>Peças originais e de alta qualidade.</p>
+    </div>
+    <div class="card">
+      <h4>Diagnóstico</h4>
+      <p>Equipamentos modernos para identificar problemas.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Fcar Automotiva - Todos os direitos reservados</p>
+</footer>
+
+<script>
+  function saibaMais() {
+    alert("Entre em contato conosco para mais informações!");
+  }
+</script>
+
+</body>
+</html>
