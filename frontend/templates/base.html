@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>
+            <a href="">
+                <img src="img/19_05_2022 16_23_07.jpg" alt="Fcar">
+            </a>
+        </h1>
+        <nav>
+            <a href="">Início</a>
+            <a href="">Contato</a>
+            <a href="">Catálogo de peças</a>
+            <a href="">Aplicação de óleo</a>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+        <hr>
+        &copy; Fcar automotiva. Todos os direitos reservados.
+    </footer>
+
+</body>
+</html>
