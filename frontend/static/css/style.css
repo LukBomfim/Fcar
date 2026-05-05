@@ -13,7 +13,7 @@
     --text: #f0ede8;
     --text-muted: #888;
     --text-dim: #555;
-    --header-h: 70px;
+    --header-h: 80px;
     --font-display: 'Barlow Condensed', sans-serif;
     --font-body: 'Barlow', sans-serif;
 }
@@ -53,6 +53,36 @@ img {
     display: block;
 }
 
+
+@keyframes heroFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 7vw, 5.6rem);
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: -0.01em;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+h2 span {
+    color: var(--red);
+}
+
+p {
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+    color: rgba(255,255,255,0.75);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+}
+
+
 /* ── HEADER ── */
 header {
     position: sticky;
@@ -66,7 +96,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 48px;
     gap: 24px;
 }
 
@@ -80,7 +110,7 @@ header h1 a {
 }
 
 header h1 img {
-    height: 44px;
+    height: 52px;
     width: auto;
     border-radius: 6px;
 }
@@ -88,15 +118,15 @@ header h1 img {
 header nav {
     display: flex;
     align-items: center;
-    gap: 4px;
+    gap: 6px;
 }
 
 header nav a {
     font-family: var(--font-body);
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 500;
     color: var(--text-muted);
-    padding: 8px 14px;
+    padding: 9px 16px;
     border-radius: 6px;
     letter-spacing: 0.02em;
     transition: color 0.2s, background 0.2s;
@@ -109,7 +139,7 @@ header nav a::after {
     bottom: 4px;
     left: 50%;
     transform: translateX(-50%) scaleX(0);
-    width: calc(100% - 28px);
+    width: calc(100% - 32px);
     height: 2px;
     background: var(--red);
     border-radius: 2px;
@@ -129,25 +159,25 @@ header nav a:hover::after {
 footer {
     background: var(--bg-2);
     border-top: 1px solid var(--border);
-    padding: 40px;
+    padding: 56px 48px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 28px;
 }
 
 footer nav {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
 }
 
 footer nav a {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--text-muted);
-    padding: 6px 12px;
+    padding: 7px 14px;
     border-radius: 4px;
     transition: color 0.2s;
 }
@@ -162,7 +192,7 @@ footer nav a:empty {
 
 footer p,
 footer > *:last-child {
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text-dim);
     letter-spacing: 0.03em;
 }
@@ -170,26 +200,26 @@ footer > *:last-child {
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
     header {
-        padding: 0 20px;
+        padding: 0 24px;
     }
 
     header nav {
-        gap: 0;
+        gap: 2px;
     }
 
     header nav a {
-        font-size: 13px;
-        padding: 8px 10px;
+        font-size: 14px;
+        padding: 8px 12px;
     }
 
     footer {
-        padding: 32px 20px;
+        padding: 40px 24px;
     }
 }
 
 @media (max-width: 480px) {
     header nav a {
-        font-size: 12px;
-        padding: 6px 8px;
+        font-size: 13px;
+        padding: 7px 10px;
     }
 }

@@ -5,3 +5,7 @@ routes = Blueprint('routes', __name__)
 @routes.route('/')
 def index():
     return render_template('index.html')
+
+@routes.route('/contato')
+def contato():
+    return render_template('contato.html')
