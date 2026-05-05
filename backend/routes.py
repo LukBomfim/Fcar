@@ -9,3 +9,7 @@ def index():
 @routes.route('/contato')
 def contato():
     return render_template('contato.html')
+
+@routes.route('/localizacao')
+def localizacao():
+    return render_template('localizacao.html')
