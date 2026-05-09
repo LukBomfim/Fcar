@@ -2,7 +2,7 @@
 .hero {
     height: 88vh;
     min-height: 580px;
-    background: url('https://evoralub.s3.sa-east-1.amazonaws.com/images/landing_pages/189_Kly3hRSCmaeQ6ju.png') center/cover no-repeat;
+    background: url('../img/heroBackground-oficina.png') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
