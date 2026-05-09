@@ -221,7 +221,7 @@ footer > *:last-child {
     }
 
     footer {
-        padding: 40px 24px;
+        display: none;
     }
 }
 
