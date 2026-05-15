@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock %}</title>
+    <link rel="icon" href="{{ url_for('static', filename='img/iconFcar.png') }}" type="image/png">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
     {% block style %}{% endblock %}
 </head>
@@ -27,6 +28,13 @@
         {% block content %}
         {% endblock %}
     </main>
+    <nav class="bottom-nav">
+        <a href="/" class="{{ 'active' if request.path == '/' }}">Sobre</a>
+        <a href="/contato" class="{{ 'active' if request.path == '/contato' }}">Contato</a>
+        <a href="/localizacao" class="{{ 'active' if request.path == '/localizacao' }}">Localização</a>
+        <a href="/pecas" class="{{ 'active' if request.path == '/pecas' }}">Catálogo de peças</a>
+        <a href="/oleo" class="{{ 'active' if request.path == '/oleo' }}">Aplicação de óleo</a>
+    </nav>
 
     <footer>
         <nav>
@@ -36,7 +44,6 @@
             <a href="/pecas" class="{{ 'active' if request.path == '/pecas' }}">Catálogo de peças</a>
             <a href="/oleo" class="{{ 'active' if request.path == '/oleo' }}">Aplicação de óleo</a>
         </nav>
-        
         &copy; Fcar automotiva - Todos os direitos reservados.
     </footer>
 
