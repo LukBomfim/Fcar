@@ -32,28 +32,38 @@
             </div>
 
             <div class="area-form-email">
-                <form method="post">
+                <form method="POST" id="form-contato">
                     <label>Nome do contato
-                        <input type="text" name="name">
+                        <input type="text" name="nome" 
+                        id="form-nome" placeholder="Fulano de Tal">
+                        <span id="nome-erro" class="erro"></span>
                     </label>
                     <br>
                     <label>E-mail
-                        <input type="email" name="email">
+                        <input type="email" name="email" 
+                        id="form-email" placeholder="email@email.com">
+                        <span id="email-erro" class="erro"></span>
                     </label>
                     <br>
                     <label>Telefone
-                        <input type="tel" name="telefone">
+                        <input type="tel" name="telefone" 
+                        id="form-telefone" placeholder="(99) 99999-9999">
+                        <span id="telefone-erro" class="erro"></span>
                     </label>
                     <br>
                     <label>Assunto
-                        <input type="text" name="assunto">
+                        <input type="text" name="assunto" 
+                        id="form-assunto" placeholder="Assunto">
+                        <span id="text-erro" class="erro"></span>
                     </label>
                     <br>
                     <label>Mensagem
-                        <textarea name="mensagem"></textarea>
+                        <textarea name="mensagem" 
+                        id="form-mensagem" placeholder="Digite sua mensagem..."></textarea>
+                        <span id="mensagem-erro" class="erro"></span>
                     </label>
                     <br>
-                    <button>
+                    <button type="button" onclick="enviarMensagem()">
                         Enviar
                     </button>
                 </form>
@@ -61,4 +71,5 @@
         </div>
     </section>
 
+    <script src="{{ url_for('static', filename='js/contato.js') }}"></script>
 {% endblock %}

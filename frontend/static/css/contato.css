@@ -102,7 +102,7 @@
     letter-spacing: 0.06em;
 }
 
-/* remove os <br> do efeito visual (já temos gap no form) */
+/* remove os <br> do efeito visual (já tem gap no form) */
 .area-form-email br {
     display: none;
 }
@@ -128,8 +128,7 @@
 
 .area-form-email input:focus,
 .area-form-email textarea:focus {
-    border-color: var(--red);
-    box-shadow: 0 0 0 3px var(--red-glow);
+    border-color: var(--text);
 }
 
 .area-form-email textarea {
