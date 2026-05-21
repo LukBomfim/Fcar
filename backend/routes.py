@@ -6,7 +6,7 @@ routes = Blueprint('routes', __name__)
 def index():
     return render_template('index.html')
 
-@routes.route('/contato')
+@routes.route('/contato', methods=['GET','POST'])
 def contato():
     return render_template('contato.html')
 
