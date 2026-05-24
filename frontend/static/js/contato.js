@@ -18,7 +18,7 @@ async function enviarMensagem() {
     })
 
     const resultado = await resposta.json()
-    if (resultado.status === 'success') {
+    if (resultado.status === 'sucesso') {
         alert('Mensagem enviada com sucesso!')
         form.reset()
     }
