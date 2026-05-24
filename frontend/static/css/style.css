@@ -223,17 +223,6 @@ footer > *:last-child {
     footer {
         display: none;
     }
-}
-
-@media (max-width: 480px) {
-    header nav a {
-        font-size: 13px;
-        padding: 7px 10px;
-    }
-}
-
-/* ── BOTTOM NAV (mobile) ── */
-@media (max-width: 768px) {
 
     /* esconde a nav do header no mobile */
     header nav {
@@ -286,6 +275,14 @@ footer > *:last-child {
         padding-bottom: 72px;
     }
 }
+
+@media (max-width: 480px) {
+    header nav a {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+}
+
 
 @media (min-width: 769px) {
     .bottom-nav {

@@ -33,39 +33,60 @@
 
             <div class="area-form-email">
                 <form method="POST" id="form-contato">
-                    <label>Nome do contato
+                    <label>
+                        <span>
+                            Nome do contato <span class="obrigatorio">*</span>
+                        </span>
                         <input type="text" name="nome" 
-                        id="form-nome" placeholder="Fulano de Tal">
+                        id="form-nome" placeholder="Fulano de Tal"
+                        oninput="digitar(event)">
                         <span id="nome-erro" class="erro"></span>
                     </label>
                     <br>
-                    <label>E-mail
+                    <label>
+                        <span>
+                            E-mail <span class="obrigatorio">*</span>
+                        </span>
                         <input type="email" name="email" 
-                        id="form-email" placeholder="email@email.com">
+                        id="form-email" placeholder="email@email.com"
+                        oninput="digitar(event)">
                         <span id="email-erro" class="erro"></span>
                     </label>
                     <br>
-                    <label>Telefone
+                    <label>
+                        <span>
+                            Telefone <span class="obrigatorio">*</span>
+                        </span>
                         <input type="tel" name="telefone" 
-                        id="form-telefone" placeholder="(99) 99999-9999">
+                        id="form-telefone" placeholder="(99) 99999-9999"
+                        oninput="digitar(event)">
                         <span id="telefone-erro" class="erro"></span>
                     </label>
                     <br>
-                    <label>Assunto
+                    <label>
+                        <span>
+                            Assunto <span class="obrigatorio">*</span>
+                        </span>
                         <input type="text" name="assunto" 
-                        id="form-assunto" placeholder="Assunto">
+                        id="form-assunto" placeholder="Assunto"
+                        oninput="digitar(event)">
                         <span id="text-erro" class="erro"></span>
                     </label>
                     <br>
-                    <label>Mensagem
+                    <label>
+                        <span>
+                            Mensagem <span class="obrigatorio">*</span>
+                        </span>
                         <textarea name="mensagem" 
-                        id="form-mensagem" placeholder="Digite sua mensagem..."></textarea>
+                        id="form-mensagem" placeholder="Digite sua mensagem..."
+                        oninput="digitar(event)"></textarea>
                         <span id="mensagem-erro" class="erro"></span>
                     </label>
                     <br>
                     <button type="button" onclick="enviarMensagem()">
                         Enviar
                     </button>
+                    <span id="msg-erro" class="erro"></span>
                 </form>
             </div>
         </div>
