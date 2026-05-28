@@ -19,6 +19,8 @@ Mensagem: {dados.get('mensagem')}''')
     msg['From'] = EMAIL
     msg['To'] = EMAIL
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 465) as smtp:
+    with smtplib.SMTP_SSL("smtp.gmail.com", 587) as smtp:
+        smtp.ehlo()
+        smtp.starttls()
         smtp.login(EMAIL, EMAIL_SENHA)
         smtp.send_message(msg)
