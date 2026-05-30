@@ -10,17 +10,15 @@ EMAIL_SENHA = os.getenv('EMAIL_SENHA')
 
 def enviarEmail(dados):
 
-    msg = MIMEText(f'''Nome: {dados.get('nome')}\n
-E-mail: {dados.get('email')}\n
-Telefone: {dados.get('telefone')}\n
+    msg = MIMEText(f'''Nome: {dados.get('nome')}
+E-mail: {dados.get('email')}
+Telefone: {dados.get('telefone')}
 Mensagem: {dados.get('mensagem')}''')
         
     msg['Subject'] = f'Nova mensagem: {dados.get("assunto")}'
     msg['From'] = EMAIL
     msg['To'] = EMAIL
 
-    with smtplib.SMTP_SSL("smtp.gmail.com", 587) as smtp:
-        smtp.ehlo()
-        smtp.starttls()
+    with smtplib.SMTP_SLL("smtp.gmail.com", 465) as smtp:
         smtp.login(EMAIL, EMAIL_SENHA)
         smtp.send_message(msg)

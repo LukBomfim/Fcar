@@ -43,6 +43,12 @@ async function enviarMensagem() {
             
         })
 
+        if (!resposta.ok) {
+            const texto = await resposta.text()
+            console.error('Erro do servidor:', texto)
+            throw new Error(`Servidor retornou ${resposta.status}`)
+        }
+
         const resultado = await resposta.json()
         if (resultado.status === 'sucesso') {
             btnTexto.textContent = 'Enviado!'
@@ -51,6 +57,7 @@ async function enviarMensagem() {
             form.reset()
         }
     } catch (erro){
+        console.error('Erro capturado:', erro)
         btnTexto.textContent = 'Tente novamente'
         spinner.style.display = 'none'
         msgErro.innerText = erro
@@ -59,7 +66,6 @@ async function enviarMensagem() {
             btn.disabled = false
             btnTexto.textContent = 'Enviar'
             spinner.style.display = 'none'
-            msgErro.innerText = ''
         }, 3000)
     }
     
